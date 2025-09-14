@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="uz">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Motivatsiya — Otabek</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header class="top">
+        <h1>Motivatsiya</h1>
+        <p class="sub">Har kuni bir so‘z — kuningizni o‘zgartiradi</p>
+    </header>
+
+    <main class="card main-card">
+        <section class="quote-area">
+            <div id="quoteText" class="quote">Yuklanmoqda...</div>
+            <div id="quoteAuthor" class="author"></div>
+            <div class="controls">
+                <button id="newBtn">Yangi so‘z</button>
+                <button id="copyBtn">Havolani nusxa</button>
+            </div>
+        </section>
+
+        <section class="add-area">
+            <h3>Yangi motivatsiya qo‘shish</h3>
+            <input id="newQuote" placeholder="So‘z yoki ibora" />
+            <input id="newAuthor" placeholder="Muallif (ixtiyoriy)" />
+            <button id="addBtn">Qo‘shish</button>
+            <p class="note">Qo‘shilgan so‘zlar brauzerda (<code>localStorage</code>) saqlanadi.</p>
+        </section>
+
+        <section class="all-quotes">
+            <h3>Barcha so‘zlar</h3>
+            <ul id="quotesList"></ul>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <small>Made by Otabek — Demo site</small>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
