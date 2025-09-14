@@ -2,47 +2,80 @@
 <html lang="uz">
 
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>Motivatsiya — Otabek</title>
-    <link rel="stylesheet" href="style.css" />
+    <meta charset="UTF-8">
+    <title>Motivatsiya Sayti</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to right, #00c6ff, #0072ff);
+            color: white;
+            text-align: center;
+            padding: 50px;
+        }
+
+        .quote {
+            font-size: 28px;
+            margin: 20px 0;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            background: white;
+            color: #0072ff;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #ddd;
+        }
+    </style>
 </head>
 
 <body>
-    <header class="top">
-        <h1>Motivatsiya</h1>
-        <p class="sub">Har kuni bir so‘z — kuningizni o‘zgartiradi</p>
-    </header>
+    <h1>🌟 Motivatsiya Sayti 🌟</h1>
+    <div id="quote" class="quote"></div>
+    <button onclick="showRandom()">Yangi motivatsiya</button>
 
-    <main class="card main-card">
-        <section class="quote-area">
-            <div id="quoteText" class="quote">Yuklanmoqda...</div>
-            <div id="quoteAuthor" class="author"></div>
-            <div class="controls">
-                <button id="newBtn">Yangi so‘z</button>
-                <button id="copyBtn">Havolani nusxa</button>
-            </div>
-        </section>
+    <script>
+        // Hamma ko‘radigan motivatsiya gaplar ro‘yxati
+        const quotes = [
+            "Hech qachon taslim bo‘lma!",
+            "Bugun qilgan mehnating ertaga natija beradi.",
+            "Sabrlik bo‘lsang, hammasiga erishasan.",
+            "Har kuni bir qadam oldinga!",
+            "Ronaldo ham kichkina orzulardan boshlagan.",
+            "Otabek, sen ham orzularingni amalga oshirishing mumkin!",
+  "Hech qachon taslim bo‘lma!",
+            "Bugun qilgan mehnating ertaga natija beradi.",
+            "Sabrlik bo‘lsang, hammasiga erishasan.",
+            "Har kuni bir qadam oldinga!",
+            "Ronaldo ham kichkina orzulardan boshlagan.",
+            "Otabek, sen ham orzularingni amalga oshirishing mumkin!",
+            "Sevgi odamni kuchli qiladi, lekin chin sevgi odamni donishmand ham qiladi.",
+            "Haqiqiy sevgi masofa tan olmaydi, yurakdan yurakka yo‘l topadi.",
+            "Sevgi ishonchdan boshlanadi, sabrdan davom etadi.",
+            "Seni chin dildan sevgan odam seni hech qachon yo‘qotishni istamaydi.",
+            "Sevgi eng katta motivatsiya – kimnidir uchun yaxshiroq odam bo‘lish.",
+            "Ayriliq og‘ir, ammo u ham insonni yanada kuchliroq qiladi.",
+            "Ba’zan ayriliq – yangi boshlanish uchun eshikdir.",
+            "Ko‘z yoshlari kechagi dardni yuvadi, yangi tong esa yangi umid keltiradi.",
+            "Kim seni unutgan bo‘lsa, uni yodda tutishga arzimaydi.",
+            "Ayriliq qalbni sindiradi, lekin sindirilgan qalb ham yana sevishni o‘rganadi."
 
-        <section class="add-area">
-            <h3>Yangi motivatsiya qo‘shish</h3>
-            <input id="newQuote" placeholder="So‘z yoki ibora" />
-            <input id="newAuthor" placeholder="Muallif (ixtiyoriy)" />
-            <button id="addBtn">Qo‘shish</button>
-            <p class="note">Qo‘shilgan so‘zlar brauzerda (<code>localStorage</code>) saqlanadi.</p>
-        </section>
+        ];
 
-        <section class="all-quotes">
-            <h3>Barcha so‘zlar</h3>
-            <ul id="quotesList"></ul>
-        </section>
-    </main>
+        function showRandom() {
+            const randomIndex = Math.floor(Math.random() * quotes.length);
+            document.getElementById("quote").innerText = quotes[randomIndex];
+        }
 
-    <footer class="footer">
-        <small>Made by Otabek — Demo site</small>
-    </footer>
-
-    <script src="script.js"></script>
+        // Sahifa ochilganda birinchi gap chiqsin
+        showRandom();
+    </script>
 </body>
 
 </html>
